@@ -1,0 +1,60 @@
+# LaTeX
+*.aux
+*.bbl
+*.blg
+*.log
+*.out
+*.toc
+*.lof
+*.lot
+*.fls
+*.fdb_latexmk
+*.synctex.gz
+*.dvi
+*.ps
+*.bcf
+*.run.xml
+*.nav
+*.snm
+*.vrb
+*.synctex
+*_latexmk/
+*.pdf
+!Collatz_v8_FINAL.pdf
+!paper.pdf
+
+# Python (validation scripts)
+__pycache__/
+*.py[cod]
+*.egg-info/
+.venv/
+venv/
+.env
+dist/
+build/
+.mypy_cache/
+.pytest_cache/
+.ruff_cache/
+.coverage
+htmlcov/
+
+# Data / figures (keep tracked PNGs, ignore temp)
+# *.png already tracked; ignore large hunt dumps
+*.tmp
+*.h5
+*.npy
+*.npz
+
+# OS / Editor
+.DS_Store
+Thumbs.db
+*.swp
+*.swo
+*~
+.vscode/
+.idea/
+.opencode/
+
+# large raw hunt outputs (if regenerated locally)
+hunt/
+raw_results/

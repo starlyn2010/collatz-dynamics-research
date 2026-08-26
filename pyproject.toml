@@ -1,0 +1,46 @@
+[project]
+name = "collatz-dynamics-research"
+version = "0.1.0"
+description = "Exact prefix laws for 2-adic valuations in Collatz orbits — proofs, density-one bound, and large-scale computational validation"
+readme = "README.md"
+requires-python = ">=3.10"
+license = { text = "MIT" }
+authors = [
+    { name = "Starlyn Eliezer Rosario Reyes", email = "starlyneliezerrosario@gmail.com" },
+]
+keywords = ["collatz", "2-adic-valuation", "number-theory", "stochastic-dynamics"]
+classifiers = [
+    "Development Status :: 4 - Beta",
+    "Intended Audience :: Science/Research",
+    "License :: OSI Approved :: MIT License",
+    "Programming Language :: Python :: 3",
+    "Topic :: Scientific/Engineering :: Mathematics",
+]
+dependencies = [
+    "numpy>=1.24.0",
+    "matplotlib>=3.7.0",
+    "scipy>=1.10.0",
+]
+
+[project.optional-dependencies]
+dev = [
+    "pytest>=7.0",
+    "ruff>=0.1.0",
+]
+
+[project.urls]
+Homepage = "https://github.com/starlyn2010/collatz-dynamics-research"
+Repository = "https://github.com/starlyn2010/collatz-dynamics-research"
+Issues = "https://github.com/starlyn2010/collatz-dynamics-research/issues"
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+pythonpath = ["."]
+
+[tool.ruff]
+line-length = 100
+target-version = "py310"

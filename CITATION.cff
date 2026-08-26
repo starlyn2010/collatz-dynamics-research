@@ -1,0 +1,20 @@
+cff-version: 1.2.0
+message: "If you use this work, please cite it as below."
+type: article
+title: "A Modular Residue Framework for Orbitwise 2-Adic Valuations in Collatz Sequences: Exact Prefix Laws, a Density-One Bound, and Large-Scale Validation"
+authors:
+  - family-names: "Rosario Reyes"
+    given-names: "Starlyn Eliezer"
+    email: "starlyneliezerrosario@gmail.com"
+    affiliation: "Independent Researcher, Santo Domingo, Dominican Republic"
+date-released: "2026-04-01"
+repository-code: "https://github.com/starlyn2010/collatz-dynamics-research"
+license: "MIT"
+keywords:
+  - collatz
+  - 2-adic-valuation
+  - syracuse
+  - prefix-law
+  - density-one
+abstract: "Rigorous prefix cylinder law for Collatz 2-adic valuations (exact residue characterization, negative-binomial prefix law), a density-one prefix discrepancy bound, and a 3x4 computational matrix (M=64,128,256 x N=20,40,60,80, 10k samples/cell) plus exhaustive sweep to 10^7."
+version: "0.1.0"

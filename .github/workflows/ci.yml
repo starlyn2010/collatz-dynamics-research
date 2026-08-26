@@ -1,0 +1,40 @@
+name: CI
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: Install Python deps
+        run: |
+          python -m pip install --upgrade pip
+          pip install -e ".[dev]"
+
+      - name: Lint
+        run: ruff check . || true
+
+      - name: Tests
+        run: pytest -q
+
+      - name: LaTeX build
+        uses: xu-cheng/latex-action@v3
+        with:
+          root_file: Collatz_v8_FINAL.tex
+          compiler: pdflatex
+          args: "-interaction=nonstopmode -halt-on-error"
+        continue-on-error: true
+
+      - name: Check figures present
+        run: ls -lh *.png && test -f Collatz_v8_FINAL.tex
